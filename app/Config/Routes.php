@@ -5,6 +5,9 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
+
+$routes->get('/', 'LandingPageController::index');
+
 $routes->group('admin', function ($routes) {
     $routes->get('dashboard', 'BukuController::index');
     $routes->get('buku', 'BukuController::index');
