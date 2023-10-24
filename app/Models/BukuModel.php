@@ -35,7 +35,10 @@ class BukuModel extends Model
 
     public function getBookByISBN($isbn)
     {
-        return $this->where('isbn', $isbn)->first();
+        $this->select('buku.*, kategori.nama as kategori');
+        $this->join('kategori', 'kategori.idkategori = buku.idkategori');
+        $result = $this->where('isbn', $isbn)->first();
+        return $result;
     }
 
 

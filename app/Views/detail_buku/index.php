@@ -45,7 +45,7 @@
                         <th>Tahun terbit</th>
                         <th>:</th>
                         <td>
-                            <?= $buku['tahun'] ?>
+                            <?= $buku['tgl_insert'] ?>
                         </td>
                     </tr>
                     <tr>
